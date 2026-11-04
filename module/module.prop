@@ -1,0 +1,6 @@
+id=DolbyMi5AudioX
+name=Dolby + MiPad 5 Pro Audio X (enuma)
+version=v1.0
+versionCode=1
+author=DeepSeek Harness
+description=MiPad 5 Pro Audio X tuning for enuma, with the ROM Dolby (dlbatmos) effect re-attached instead of the missing libhwdap/libswgdap/libswvqe chain. Based on MiPad 5 Pro Audio X by Sc素菜 (tuning files) and the ROM's own audio_effects.xml (Dolby entries).
