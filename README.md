@@ -33,7 +33,7 @@
 ## 安装
 
 1. 已刷 Magisk
-2. 从 [Releases](../../releases) 下载 `dolby_miaudio_enuma_v1.1.zip`
+2. 从 [Releases](../../releases) 下载 `dolby_miaudio_enuma_v1.2.zip`
 3. **Magisk App → 模块 → 从本地安装**
 4. 重启
 
@@ -76,7 +76,9 @@ dmesg | grep avc | grep -i dlbatmos   # 空
 
 这是正常现象：那两个是 AOSP 通用效果器，本机扬声器路径不支持它们；而低频与声场在 Dolby 底层已经调好（`virtual-bass-*`、`virtualizer`），比那两个开关强得多。
 
-## 音量与音质调校说明（v1.1）
+## 音量与音质调校说明（v1.2）
+
+v1.2 起，音量曲线与部分音效参数**借鉴 Redmi K90 Pro Max（HyperOS 4.0）**，实测后定稿。
 
 | 参数 | 位置 | 改动 |
 |---|---|---|
@@ -88,6 +90,25 @@ dmesg | grep avc | grep -i dlbatmos   # 空
 | `virtualizer-*-speaker-angle` | 同上 | 20°→24°，10°→14° |
 | `surround-boost` | 同上 | 保持 0（96 会"假"） |
 | `music` 扬声器曲线 | `audio_policy_engine_stream_volumes.xml` | 20% 处 −50 dB，满格封顶 −8 dB |
+
+## 为什么借鉴 K90 Pro Max
+
+在同一条耳机/外放下与 Redmi K90 Pro Max（`myron`，HyperOS 4.0）逐项比对，读取了它的
+`/vendor/etc/audio_policy_engine_stream_volumes.xml` 与 `/odm/etc/dolby/dax-default.xml`：
+
+| 参数 | enuma（本模块） | K90 Pro Max |
+|---|---|---|
+| 音乐/扬声器曲线控制点 | 15 → **32**（v1.2 起） | 32 |
+| 1 格 / 20% / 满格 | −73.2 / −43.7 / −10 dB | 同 |
+| `volume-leveler` | 开（v1.2 起） | 开 |
+| `volmax-boost` | 16 / 24 / 41 / 48 | 16 / 24 / 32 / 48 |
+| 虚拟声场角度 | 24° / 14° | 10° |
+| IEQ 预设 | 3 组（含自定义曲线） | 无 |
+| 独立空间音频配置 | 无 | `dax-default-spatializer.xml` |
+
+结论：K90 的 DSP 参数其实比本模块**保守**（角度更小、无 IEQ、虚拟低音增益 0），
+它更好听主要来自**硬件**（更大单元、更足功放余量）。因此只借用了它的**音量曲线形状**
+（32 点、过渡平滑）与 `volmax-boost` 区间，其余仍按 enuma 的腔体单独调校。
 
 ## 已知限制
 

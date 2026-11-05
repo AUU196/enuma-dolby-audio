@@ -1,11 +1,11 @@
-# Rebuilds dist/dolby_miaudio_enuma_v1.1.zip from module/
+# Rebuilds dist/dolby_miaudio_enuma_v1.2.zip from module/
 # Usage: powershell -NoProfile -ExecutionPolicy Bypass -File build.ps1
 #
 # Entry names must use forward slashes: Windows' Compress-Archive writes
 # backslashes for nested paths and Android's unzip then produces malformed names.
 
 param(
-    [string]$Version = 'v1.1'
+    [string]$Version = 'v1.2'
 )
 
 $ErrorActionPreference = 'Stop'
