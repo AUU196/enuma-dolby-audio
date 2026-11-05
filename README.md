@@ -33,7 +33,7 @@
 ## 安装
 
 1. 已刷 Magisk
-2. 从 [Releases](../../releases) 下载 `dolby_miaudio_enuma_v1.0.zip`
+2. 从 [Releases](../../releases) 下载 `dolby_miaudio_enuma_v1.1.zip`
 3. **Magisk App → 模块 → 从本地安装**
 4. 重启
 
@@ -67,10 +67,32 @@ dmesg | grep avc | grep -i dlbatmos   # 空
 | 低音下潜 | Mi5 的 `dolby/dax-default.xml` 生效，最低频段 47Hz |
 | 延迟优化 | `vendor.audio.lowpower=false`、`buffering.ms=6`、offload/tunnel 开启 |
 
+## 手动均衡器
+
+本模块**不带界面**（Magisk 模块改的是配置文件）。手动微调用 ROM 自带的 **AudioFX**：
+
+- 位置：`/system_ext/priv-app/AudioFX/AudioFX.apk`，应用抽屉里叫 **AudioFX**
+- 只有「均衡器」标签可用；「低音增强」「虚拟环绕」会提示"效果不适用于扬声器模式"
+
+这是正常现象：那两个是 AOSP 通用效果器，本机扬声器路径不支持它们；而低频与声场在 Dolby 底层已经调好（`virtual-bass-*`、`virtualizer`），比那两个开关强得多。
+
+## 音量与音质调校说明（v1.1）
+
+| 参数 | 位置 | 改动 |
+|---|---|---|
+| `volume-leveler-enable` | `dolby/dax-default.xml` | 全部关闭（26 处） |
+| `volmax-boost` | 同上 | 32 → 0（去掉 +3.2 dB） |
+| `ieq-enable` | 同上 | 扬声器端由 false → true |
+| `ieq_balanced` 曲线 | 同上 | 234/328 Hz −4.8 dB，4.7k–19k 分段提升 |
+| `virtual-bass-overall-gain` | 同上 | 0 → +6 dB |
+| `virtualizer-*-speaker-angle` | 同上 | 20°→24°，10°→14° |
+| `surround-boost` | 同上 | 保持 0（96 会"假"） |
+| `music` 扬声器曲线 | `audio_policy_engine_stream_volumes.xml` | 20% 处 −50 dB，满格封顶 −8 dB |
+
 ## 已知限制
 
 - 调音曲线按 **elish（Pad 5 Pro Wi-Fi）** 的腔体制作。enuma 是同模具 5G 版，物理接近但不完全等同。
-- 模块自带 `MusicFX.apk`，但**未被系统注册**（`pm list packages` 中不存在），因此暂无均衡器界面。
+- 手动均衡器依赖 ROM 自带的 AudioFX；若换用不带该 App 的 ROM，需要另装 EQ（本模块不含界面，v1.1 已移除无效的 `MusicFX.apk`）。
 - 与 `Dolby Atmos elish`（Atmos）模块**互斥**：两者都覆盖 `audio_effects.xml`，不要同时启用。
 - 仅在 `23.2-20260414-UNOFFICIAL-enuma` / Android 16 实测。
 

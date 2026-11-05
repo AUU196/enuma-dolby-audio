@@ -116,8 +116,7 @@
     </effects>
     <postprocess>
         <stream type="music">
-            <apply effect="dlbatmos"/>
-        </stream>
+            <apply effect="dlbatmos"/></stream>
         <stream type="ring">
             <apply effect="ring_helper"/>
         </stream>
