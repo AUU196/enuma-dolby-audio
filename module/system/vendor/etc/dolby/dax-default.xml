@@ -6,26 +6,26 @@
   <preset id="ieq_balanced" type="ieq">
     <data>
       <ieq-bands>
-        <band_ieq frequency="47" target="157"/>
-        <band_ieq frequency="141" target="167"/>
-        <band_ieq frequency="234" target="218"/>
-        <band_ieq frequency="328" target="218"/>
-        <band_ieq frequency="469" target="203"/>
-        <band_ieq frequency="656" target="188"/>
-        <band_ieq frequency="844" target="192"/>
-        <band_ieq frequency="1031" target="192"/>
-        <band_ieq frequency="1313" target="205"/>
-        <band_ieq frequency="1688" target="213"/>
-        <band_ieq frequency="2250" target="218"/>
-        <band_ieq frequency="3000" target="209"/>
-        <band_ieq frequency="3750" target="193"/>
-        <band_ieq frequency="4688" target="159"/>
-        <band_ieq frequency="5813" target="134"/>
-        <band_ieq frequency="7125" target="97"/>
-        <band_ieq frequency="9000" target="71"/>
-        <band_ieq frequency="11250" target="22"/>
-        <band_ieq frequency="13875" target="-90"/>
-        <band_ieq frequency="19688" target="-283"/>
+        <band_ieq frequency="47" target="160"/>
+        <band_ieq frequency="141" target="170"/>
+        <band_ieq frequency="234" target="170"/>
+        <band_ieq frequency="328" target="170"/>
+        <band_ieq frequency="469" target="176"/>
+        <band_ieq frequency="656" target="184"/>
+        <band_ieq frequency="844" target="188"/>
+        <band_ieq frequency="1031" target="194"/>
+        <band_ieq frequency="1313" target="202"/>
+        <band_ieq frequency="1688" target="210"/>
+        <band_ieq frequency="2250" target="216"/>
+        <band_ieq frequency="3000" target="212"/>
+        <band_ieq frequency="3750" target="205"/>
+        <band_ieq frequency="4688" target="180"/>
+        <band_ieq frequency="5813" target="160"/>
+        <band_ieq frequency="7125" target="125"/>
+        <band_ieq frequency="9000" target="105"/>
+        <band_ieq frequency="11250" target="80"/>
+        <band_ieq frequency="13875" target="30"/>
+        <band_ieq frequency="19688" target="-40"/>
       </ieq-bands>
     </data>
   </preset>
@@ -326,7 +326,7 @@
       <reverb-suppression-enable value="false"/>
       <reverb-suppression-amount value="9"/>
       <endpoint_type id="speaker">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_balanced"/>
         <calibration-boost value="0"/>
@@ -337,8 +337,8 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
@@ -367,7 +367,7 @@
         <surround-decoder-enable value="true"/>
         <surround-boost value="80"/>
         <volmax-boost value="16"/>
-        <volume-leveler-enable value="true"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
@@ -395,13 +395,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -425,7 +425,7 @@
       <reverb-suppression-enable value="false"/>
       <reverb-suppression-amount value="9"/>
       <endpoint_type id="speaker">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_balanced"/>
         <calibration-boost value="0"/>
@@ -437,7 +437,7 @@
         <surround-decoder-enable value="true"/>
         <surround-boost value="512"/>
         <volmax-boost value="48"/>
-        <volume-leveler-enable value="true"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
@@ -466,7 +466,7 @@
         <surround-decoder-enable value="true"/>
         <surround-boost value="88"/>
         <volmax-boost value="48"/>
-        <volume-leveler-enable value="true"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
@@ -483,7 +483,7 @@
         <headphone-virtualizer-steerer-source-distance value="24"/>
       </endpoint_type>
       <endpoint_type id="other">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_balanced"/>
         <calibration-boost value="0"/>
@@ -494,13 +494,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -536,12 +536,12 @@
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
         <volmax-boost value="41"/>
-        <volume-leveler-enable value="true"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="true"/>
         <hearing-protection-enable value="false"/>
@@ -570,7 +570,7 @@
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="true"/>
@@ -593,13 +593,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -623,7 +623,7 @@
       <reverb-suppression-enable value="false"/>
       <reverb-suppression-amount value="9"/>
       <endpoint_type id="speaker">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_warm"/>
         <calibration-boost value="0"/>
@@ -635,12 +635,12 @@
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
         <volmax-boost value="48"/>
-        <volume-leveler-enable value="true"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -652,7 +652,7 @@
         <headphone-virtualizer-steerer-source-distance value="4"/>
       </endpoint_type>
       <endpoint_type id="headphone">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_warm"/>
         <calibration-boost value="0"/>
@@ -664,12 +664,12 @@
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
         <volmax-boost value="64"/>
-        <volume-leveler-enable value="true"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -681,7 +681,7 @@
         <headphone-virtualizer-steerer-source-distance value="4"/>
       </endpoint_type>
       <endpoint_type id="other">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_warm"/>
         <calibration-boost value="0"/>
@@ -692,13 +692,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -733,8 +733,8 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
@@ -762,8 +762,8 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
@@ -791,8 +791,8 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
@@ -821,7 +821,7 @@
       <reverb-suppression-enable value="true"/>
       <reverb-suppression-amount value="9"/>
       <endpoint_type id="speaker">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_balanced"/>
         <calibration-boost value="0"/>
@@ -832,8 +832,8 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
@@ -850,7 +850,7 @@
         <headphone-virtualizer-steerer-source-distance value="4"/>
       </endpoint_type>
       <endpoint_type id="headphone">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_balanced"/>
         <calibration-boost value="0"/>
@@ -861,8 +861,8 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
@@ -879,7 +879,7 @@
         <headphone-virtualizer-steerer-source-distance value="4"/>
       </endpoint_type>
       <endpoint_type id="other">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_balanced"/>
         <calibration-boost value="0"/>
@@ -890,8 +890,8 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
@@ -931,13 +931,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -960,13 +960,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -989,13 +989,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -1019,7 +1019,7 @@
       <reverb-suppression-enable value="true"/>
       <reverb-suppression-amount value="9"/>
       <endpoint_type id="speaker">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_warm"/>
         <calibration-boost value="0"/>
@@ -1030,13 +1030,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -1048,7 +1048,7 @@
         <headphone-virtualizer-steerer-source-distance value="4"/>
       </endpoint_type>
       <endpoint_type id="headphone">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_warm"/>
         <calibration-boost value="0"/>
@@ -1059,13 +1059,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -1077,7 +1077,7 @@
         <headphone-virtualizer-steerer-source-distance value="4"/>
       </endpoint_type>
       <endpoint_type id="other">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_warm"/>
         <calibration-boost value="0"/>
@@ -1088,13 +1088,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -1130,12 +1130,12 @@
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
         <volmax-boost value="65"/>
-        <volume-leveler-enable value="true"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="true"/>
         <hearing-protection-enable value="false"/>
@@ -1158,13 +1158,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="true"/>
@@ -1176,7 +1176,7 @@
         <headphone-virtualizer-steerer-source-distance value="4"/>
       </endpoint_type>
       <endpoint_type id="other">
-        <ieq-enable value="false"/>
+        <ieq-enable value="true"/>
         <ieq-amount value="6"/>
         <include preset="ieq_warm"/>
         <calibration-boost value="0"/>
@@ -1187,13 +1187,13 @@
         <peak-value value="256"/>
         <surround-decoder-enable value="true"/>
         <surround-boost value="0"/>
-        <volmax-boost value="32"/>
-        <volume-leveler-enable value="true"/>
+        <volmax-boost value="0"/>
+        <volume-leveler-enable value="false"/>
         <volume-leveler-amount value="0"/>
         <volume-leveler-in-target value="-256"/>
         <volume-leveler-out-target value="-256"/>
         <graphic-equalizer-enable value="true"/>
-        <virtualizer-enable value="false"/>
+        <virtualizer-enable value="true"/>
         <bass-enhancer-enable value="false"/>
         <virtual-bass-process-enable value="false"/>
         <hearing-protection-enable value="false"/>
@@ -1278,14 +1278,14 @@
       <regulator-distortion-slope value="16"/>
       <bass-mbdrc-tuning value="1,-2080,0,-1200,-368,-368,-80,3,93,0,1,-1600,0,-1120,-400,-368,-96,4,86,0,0,-1600,0,-1120,-400,-240,0,5,10,0,0,-1600,0,-1120,-400,-240,0,5,10,0,0,-1600,0,-1120,-400,-240,0,5,10,0,0,-1600,0,-1120,-400,-240,0,5,10,0,0,-1600,0,-1120,-400,-352,-240,5,10,64,1,-1600,0,-1120,-400,-240,-64,39,74,32"/>
       <virtual-bass-mode value="3"/>
-      <virtual-bass-overall-gain value="0"/>
+      <virtual-bass-overall-gain value="60"/>
       <virtual-bass-slope-gain value="0"/>
       <virtual-bass-mix-freqs frequency_low="50" frequency_high="240"/>
       <virtual-bass-src-freqs frequency_low="20" frequency_high="140"/>
-      <virtual-bass-subgains harmonic_2="-16" harmonic_3="-64" harmonic_4="-128"/>
-      <virtualizer-front-speaker-angle value="20"/>
-      <virtualizer-height-speaker-angle value="20"/>
-      <virtualizer-surround-speaker-angle value="20"/>
+      <virtual-bass-subgains harmonic_2="-8" harmonic_3="-64" harmonic_4="-128"/>
+      <virtualizer-front-speaker-angle value="24"/>
+      <virtualizer-height-speaker-angle value="24"/>
+      <virtualizer-surround-speaker-angle value="24"/>
       <volume-modeler-calibration value="0"/>
       <audio-optimizer-enable value="true"/>
       <volume-leveler-compressor-enable value="false"/>
@@ -1374,14 +1374,14 @@
       <regulator-distortion-slope value="16"/>
       <bass-mbdrc-tuning value="1,-2080,0,-1200,-368,-368,-80,3,93,0,1,-1600,0,-1120,-400,-368,-96,4,86,0,0,-1600,0,-1120,-400,-240,0,5,10,0,0,-1600,0,-1120,-400,-240,0,5,10,0,0,-1600,0,-1120,-400,-240,0,5,10,0,0,-1600,0,-1120,-400,-240,0,5,10,0,0,-1600,0,-1120,-400,-352,-240,5,10,64,1,-1600,0,-1120,-400,-240,-64,39,74,32"/>
       <virtual-bass-mode value="3"/>
-      <virtual-bass-overall-gain value="0"/>
+      <virtual-bass-overall-gain value="60"/>
       <virtual-bass-slope-gain value="0"/>
       <virtual-bass-mix-freqs frequency_low="50" frequency_high="240"/>
       <virtual-bass-src-freqs frequency_low="20" frequency_high="140"/>
-      <virtual-bass-subgains harmonic_2="-16" harmonic_3="-64" harmonic_4="-128"/>
-      <virtualizer-front-speaker-angle value="20"/>
-      <virtualizer-height-speaker-angle value="20"/>
-      <virtualizer-surround-speaker-angle value="20"/>
+      <virtual-bass-subgains harmonic_2="-8" harmonic_3="-64" harmonic_4="-128"/>
+      <virtualizer-front-speaker-angle value="24"/>
+      <virtualizer-height-speaker-angle value="24"/>
+      <virtualizer-surround-speaker-angle value="24"/>
       <volume-modeler-calibration value="0"/>
       <audio-optimizer-enable value="true"/>
       <volume-leveler-compressor-enable value="false"/>
@@ -1467,14 +1467,14 @@
       <regulator-distortion-slope value="16"/>
       <bass-mbdrc-tuning value="1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0"/>
       <virtual-bass-mode value="3"/>
-      <virtual-bass-overall-gain value="0"/>
+      <virtual-bass-overall-gain value="60"/>
       <virtual-bass-slope-gain value="0"/>
       <virtual-bass-mix-freqs frequency_low="99" frequency_high="281"/>
       <virtual-bass-src-freqs frequency_low="30" frequency_high="90"/>
       <virtual-bass-subgains harmonic_2="-48" harmonic_3="-480" harmonic_4="-240"/>
-      <virtualizer-front-speaker-angle value="10"/>
-      <virtualizer-height-speaker-angle value="10"/>
-      <virtualizer-surround-speaker-angle value="10"/>
+      <virtualizer-front-speaker-angle value="14"/>
+      <virtualizer-height-speaker-angle value="14"/>
+      <virtualizer-surround-speaker-angle value="14"/>
       <volume-modeler-calibration value="160"/>
       <audio-optimizer-enable value="false"/>
       <volume-leveler-compressor-enable value="false"/>
@@ -1558,14 +1558,14 @@
       <regulator-distortion-slope value="16"/>
       <bass-mbdrc-tuning value="1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0"/>
       <virtual-bass-mode value="3"/>
-      <virtual-bass-overall-gain value="0"/>
+      <virtual-bass-overall-gain value="60"/>
       <virtual-bass-slope-gain value="0"/>
       <virtual-bass-mix-freqs frequency_low="94" frequency_high="469"/>
       <virtual-bass-src-freqs frequency_low="35" frequency_high="160"/>
       <virtual-bass-subgains harmonic_2="-32" harmonic_3="-144" harmonic_4="-192"/>
-      <virtualizer-front-speaker-angle value="10"/>
-      <virtualizer-height-speaker-angle value="10"/>
-      <virtualizer-surround-speaker-angle value="10"/>
+      <virtualizer-front-speaker-angle value="14"/>
+      <virtualizer-height-speaker-angle value="14"/>
+      <virtualizer-surround-speaker-angle value="14"/>
       <volume-modeler-calibration value="0"/>
       <audio-optimizer-enable value="false"/>
       <volume-leveler-compressor-enable value="false"/>
